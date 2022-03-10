@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/*
+card 常用結構會有4層，由外而內為
+container>row>column>card
+*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 30px;
+}
+/*
+在container設定RWD的尺寸，因為container是最外圍的容器
+RWD由大尺寸做到小尺寸(較好修正)
+所以使用max-width判斷小於條件時有效
+*/
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  margin: 15px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding-top: 50%;
+  position: relative;
+
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-bottom: 2px;
+
+}
+.w-25 {
+  width: 25%;
+}
+.icon-vector {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card-tag {
+  background-color: #ffec3d;
+  border-radius: 20px;
+  font-family: Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  width: 80px;
+  height: 32px;
+  align-items: flex-start;
+  position: static;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 8px;
+  padding-top: 4px;
+  padding-left: 2px;
+}
+.sight {
+  color: #fefefe;
+  font-family: Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  margin-left: 8px;
+  padding-top: 8px;
+}
+.Loc-icon {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.Loc-icon img {
+  width: 8%;
+}
+.Location {
+  font-family: Noto Sans CJK TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
